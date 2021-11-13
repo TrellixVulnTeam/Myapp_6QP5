@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  gather_fact: true
+  gather_facts: true
   become: true
   roles:
     - { role: docker }
