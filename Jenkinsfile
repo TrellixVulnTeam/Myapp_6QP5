@@ -27,5 +27,13 @@ pipeline {
 		  }
 		}
 
+    stage('dockerhub') 
+    {
+     steps{
+       script{
+         sh "ansible-playbook Myapp/ansible/register.yml -i Myapp/ansible/inventory/host.yml"
+       }
+      }
+    }
 	}
 }
