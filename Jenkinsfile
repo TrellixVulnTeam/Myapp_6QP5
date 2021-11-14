@@ -35,5 +35,13 @@ pipeline {
        }
       }
     }
+    
+    stage ('Email Notification') 
+    {
+      steps {
+        mail bcc: '', body: 'your pipeline has been built', cc: '', from: '', replyTo: '', subject: 'Build', to: 'arthurwilliam.ngassanguesseu@esprit.tn'
+      }
+    }
+
 	}
 }
