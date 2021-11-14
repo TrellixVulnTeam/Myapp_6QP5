@@ -31,7 +31,7 @@ pipeline {
     {
      steps{
        script{
-         sh "ansible-playbook Myapp/ansible/register.yml -i Myapp/ansible/inventory/host.yml"
+         sh "ansible-playbook Myapp/ansible/docker-registry.yml -i Myapp/ansible/inventory/host.yml"
        }
       }
     }
